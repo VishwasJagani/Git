@@ -1,0 +1,76 @@
+For indepth Docs
+https://docs.chaicode.com/home-for-programmers/
+
+To Gererate New SSH Key
+ssh-keygen -t ed25519 -C "Email_address" enter this command in Cmd
+Then This Command To Copy SSH key run this in Git Bash -  clip < ~/.ssh/id_ed25519.pub
+
+To Set Email and Username
+git config --global user.email "vishwasjagani21@gmail.com"
+git config --global user.name "Vishwas Jagani"
+
+To Change Default code editor from vim to vscode
+git config --global core.editor "code --wait"
+
+To see Configuration
+git config --list
+press q to exit
+
+To initialize new repositories
+first check status using git status than
+git init
+
+To add files in a staging area
+git add File_name1 File_name2 etc... 
+or
+git add . (For all files)
+
+To add file in Repo
+git commit -m "Message We Want to add"  here -m is compulsory
+
+To see changes we made 
+git log
+
+Commands to use with git log
+git log --oneline to see changes in short 
+
+To ignore some file that git cannot track 
+first create new file named .gitignore and paste name of the which we want to not track in it
+git ignores all the file which name is present in .gitignore file
+
+
+Head always points current branch
+
+To see which branch we are working
+git branch
+
+To create a new branch
+git branch Branch_Name 
+or 
+git switch -c branch_name (It will automatically create a new branch and switch to it)
+
+To use new branch
+git switch Branch_Name 
+or 
+git checkout Branch_Name
+
+To add one branch changes to another branch 
+first go to the branch where we need to copy the changes and give branch name from which we want to copy
+git merge Branch_Name
+
+
+To Push Code in github first create an empty repo on github website
+
+This is used To check remote connection for upload and download
+git remote -v 
+
+this is used to create remote connection 
+git remote add origin https://github.com/VishwasJagani/Test.git
+We can give any name rather than origin
+
+Then Write this command
+git push -u origin master(branch_name)
+Run this command only one time 
+
+Whenever need to push new content use
+git push
